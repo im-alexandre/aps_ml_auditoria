@@ -1,0 +1,237 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{PaloAlto}
+\usepackage[sort]{natbib}
+
+% Components of the title page
+\logo{\includegraphics[height=0.4in]{logo.png}}
+
+
+
+\title[Machine learning e a auditoria]{Machine Learning e a auditoria Contínua}
+\setbeamercovered{transparent}
+
+\beamertemplatenavigationsymbolsempty
+
+\begin{document}
+
+
+
+\author[M. Alexandre P. C. Junior]{
+    \begin{tabular}{c} 
+        \Large
+        Alexandre Castro\\
+        \footnotesize \href{mailto:im.alexandre07@gmail.com}{im.alexandre07@gmail.com}
+    \end{tabular}}
+
+\institute{
+    \includegraphics[height=0.4in]{logo.png}\\
+    \textbf{Semana de Computação}\\
+}
+
+\date{22 de outubro de 2020}
+
+\AtBeginSection[]{
+    \begin{frame}
+        \frametitle{Roteiro}
+
+        \tableofcontents[currentsection]
+    \end{frame}
+}
+
+\begin{frame}\maketitle\end{frame}
+
+
+\begin{frame}
+    \frametitle{Roteiro}
+    \tableofcontents[pausesections]
+\end{frame}
+
+
+\section{Objetivos da Apresentação}
+\begin{frame}{Objetivos da Apresentação}
+    Os principais objetivos da aula são:
+    \begin{itemize}[<+- | uncover@+>]
+        \item \textit{`Desmistificar'} machine learning, IA e outros \textit{trend topics}
+        \item Conhecer algumas aplicações na auditoria.
+        \item Como é o início de uma iniciativa baseada em ML
+    \end{itemize}
+\end{frame}
+
+
+\section{Conceitos}
+\subsection{Big Data}
+\begin{frame}{Big Data}
+    \centering
+    \includegraphics[height=1in]{tennage_sex.png} \\
+    \begin{block}{}
+        Big Data:  Fenômeno caracterizado pela geração massiva e 
+        ininterrupta de dados, que podem ser processados e armazenados, gerando valor.
+    \end{block}
+\end{frame}
+
+
+\begin{frame}{Big Data}
+    \centering
+    \begin{block}{}
+        Os '3+2' \textbf{V}s do Big Data
+    \end{block}
+    \begin{itemize}
+        \item \textbf{V}elocidade;
+        \item \textbf{V}olume;
+        \item \textbf{V}ariedade;
+        \item \alert{\textbf{V}alor};
+        \item \alert{\textbf{V}eracidade};
+    \end{itemize}
+\end{frame}
+
+
+\subsection{Inteligência Artificial}
+\begin{frame}{Inteligência Artificial}
+    \centering
+    \begin{block}{Diferença entre Machine Learning e IA}
+        \begin{itemize}
+            \item Se estiver no powerpoint, é IA
+            \item No TCC será Machine Learning;
+            \item No Jupyter Notebook, regressão linear.
+        \end{itemize}
+    \end{block}
+    \includegraphics[height=1.5in]{ia_powepoint.png}
+\end{frame}
+
+\begin{frame}{Inteligência Artificial}
+    \centering
+    \begin{block}{Definição `formal'}
+        Campo de estudo que busca, por meio de ferramentas computacionais, simular
+        o comportamento humano, de forma que `a máquina' possa resolver \textbf{problemas}
+        da mesma forma que um ser humano resolveria.
+    \end{block}
+    \begin{figure}
+        \includegraphics[height=1.5in]{ai_ml_towardsdatascience.png}
+        \caption{\cite{Wu2019} Diagrama de áreas da IA}
+    \end{figure}
+\end{frame}
+
+
+\subsection{Machine Learning}
+\begin{frame}{Machine Learning}
+    \centering
+    \includegraphics[height=1.5in]{ultron.jpg}
+    \includegraphics[height=1.5in]{math.jpeg}
+\end{frame}
+
+\subsection{Auditoria Contínua}
+\begin{frame}{Auditoria Contínua}
+    \centering
+    \includegraphics[height=2.5in]{minority.jpg}
+\end{frame}
+
+
+\begin{frame}{Auditoria Contínua}
+    \centering
+    \begin{block}{O que é auditoria contínua?}
+        \begin{itemize}
+            \item Atividade de verificar os atos e processos de gestão em tempo real,
+                utilizando bases de dados provenientes dos sistemas operativos da organização.
+            \item Visa tratar os erros/desvios antes que sejam efetivados.
+            \item Trabalha com indícios, que precisam ser validados pelos auditores
+                especialistas de cada área (recursos humanos, finanças, etc.)
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\section{Aplicações na auditoria}
+\subsection{Exemplos}
+\begin{frame}
+    \frametitle{Aplicações na auditoria}
+    \framesubtitle{Aplicação de técnica de clusterização em dados de licitações}
+    \begin{itemize}
+        \item Objetivo: direcionar os esforços de verificação e controle para aquelas
+            situações com maior risco de desvios/erros. 
+        \item Empresas do mesmo estado que participaram de 233 pregões juntas.
+        \item Identificação de licitações com risco de ocorrência de cartéis.
+    \end{itemize}\cite{Silva2020}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Aplicações na auditoria}
+    \framesubtitle{O caso ALICE (TCU)}
+    \begin{itemize}
+        \item ALICE é um acrônimo para Análise de licitações e editais
+        \item O programa realiza uma série de verificações e aponta indícios de
+            irregularidades para os auditores do TCU
+        \item Esses dados não são em si irregularidades, mas indícios que 
+            apontam para o auditor olhar o edital de maneira mais detalhada.
+        \item O maior ganho que a gente tem é que os órgãos retiram, anulam ou 
+            cancelam os editais e fazem outro da forma correta.
+        \item Esse tipo de trabalho poderia ser feito por humanos, mas seria 
+            muito custoso porque são, em média, 200 editais por dia
+    \end{itemize}
+\end{frame}
+
+
+\subsection{Início da implementação}
+\begin{frame}
+    \frametitle{Aplicações na auditoria}
+    \framesubtitle{Antes disso tudo...}
+    \begin{block}{Requisitos para um projeto de ML}
+        \begin{itemize}
+            \item Profissionais com perfil analítico
+            \item Chefia envolvida e com apetite para mudanças(e riscos)
+            \item \alert{\textbf{Engenharia de dados}}
+            \item Capacitação para todos os profissionais
+        \end{itemize}
+
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Aplicações na auditoria}
+    \framesubtitle{Antes disso tudo...}
+    \begin{block}{Exemplo de workflow de auditoria contínua}
+        \centering
+        \includegraphics[height=2in]{workflow_auditorias.png}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Aplicações na auditoria}
+    \framesubtitle{Antes disso tudo...}
+    \begin{block}{A nossa stack}
+        \begin{itemize}
+            \item Postgresql
+            \item Python
+            \item Apache airflow
+            \item Caseware IDEA (auditores)
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Conclusão}
+    \centering
+        OBRIGADO!\\
+        \begin{block}{}
+            Contatos:
+        \end{block}
+
+
+    \begin{tabular}{cc}
+        Linkedin: & \href{https://www.linkedin.com/in/alexandre-castro-45593415a/}{\includegraphics[height=0.3in]{linkedin.png}}\\
+        \hline
+        Github:  & \href{https://www.github.com/im-alexandre}{\includegraphics[height=0.3in]{github.png}}\\
+        \hline
+        E-mail:  &  \href{mailto:im.alexandre07@gmail.com}{\includegraphics[height=0.3in]{gmail.png}}\\
+        \hline
+    \end{tabular}
+\end{frame}
+
+\begin{frame}{Referências}
+\bibliographystyle{abbrv}
+\bibliography{Bibliografia.bib}
+\end{frame}
+
+\end{document}
